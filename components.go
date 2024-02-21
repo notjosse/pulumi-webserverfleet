@@ -194,7 +194,7 @@ func NewWebServerFleet2(ctx *pulumi.Context, name string, network pulumi.IDOutpu
 		return nil, err
 	}
 
-	// Create a target pool. Instances can be added either by specifying `instances` property or using `instance_group`.
+	// Target Pool
 	targetPool, err := compute.NewTargetPool(ctx, "target-pool", &compute.TargetPoolArgs{
 		Region: pulumi.String("us-central1"),
 	}, pulumi.Parent(myFleet))

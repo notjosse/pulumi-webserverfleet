@@ -22,7 +22,7 @@ func main() {
 			servicePort = "80"
 		}
 
-		// Create a new network for the virtual machine.
+		// Create a new network for the fleet
 		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
 			AutoCreateSubnetworks: pulumi.Bool(false),
 		})
