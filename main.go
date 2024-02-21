@@ -54,7 +54,7 @@ func main() {
 			return err
 		}
 
-		fleet, err := NewWebServerFleet2(ctx, "web-fleet", network.ID(), instanceTag, FleetSpec{
+		fleet, err := NewWebServerFleet(ctx, "web-fleet", network.ID(), instanceTag, FleetSpec{
 			Subnets: []string{
 				"subnet-abc123",
 				"subnet-abc123",
