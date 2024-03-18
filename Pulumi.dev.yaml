@@ -2,5 +2,5 @@ config:
   gcp:project: preemptible-vms
   gcp:region: us-central1
   gcp:zone: us-central1-a
-  pulumi-webserverfleet:instanceTag: http-server
+  pulumi-webserverfleet:instanceTag: web-server
   pulumi-webserverfleet:servicePort: "80"

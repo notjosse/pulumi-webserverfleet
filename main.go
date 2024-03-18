@@ -14,7 +14,7 @@ func main() {
 
 		instanceTag, err := cfg.Try("instanceTag")
 		if err != nil {
-			instanceTag = "http-server"
+			instanceTag = "web-server"
 		}
 
 		servicePort, err := cfg.Try("servicePort")
@@ -54,14 +54,14 @@ func main() {
 			return err
 		}
 
-		fleet, err := NewWebServerFleet(ctx, "web-fleet", network.ID(), instanceTag, FleetSpec{
+		fleet, err := NewWebServerFleet2(ctx, "web-fleet", network.ID(), instanceTag, FleetSpec{
 			Subnets: []string{
 				"subnet-abc123",
 				"subnet-abc123",
 			},
 			Machines: []MachineSpec{
-				{OS: "ubuntu", Size: "small", Count: 2},
-				{OS: "debian", Size: "medium", Count: 3},
+				{OS: "ubuntu", Size: "small", Count: 1},
+				{OS: "debian", Size: "medium", Count: 2},
 			},
 		}, pulumi.DependsOn([]pulumi.Resource{firewall}))
 
