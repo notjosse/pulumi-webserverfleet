@@ -60,7 +60,7 @@ func main() {
 				"subnet-abc123",
 			},
 			Machines: []MachineSpec{
-				{OS: "ubuntu", Size: "small", Count: 1},
+				{OS: "ubuntu", Size: "small", Count: 3},
 				{OS: "debian", Size: "medium", Count: 2},
 			},
 		}, pulumi.DependsOn([]pulumi.Resource{firewall}))
